@@ -1,0 +1,4 @@
+{
+  "excludePatterns": ["node_modules/*"],
+  "projectPath": "/Users/darkawower/projects/ui"
+}
