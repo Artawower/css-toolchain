@@ -4,16 +4,15 @@
   "description": "CLI tool for manipulate with your css, migrate scss variables etc",
   "main": "dist/index.js",
   "type": "module",
-  "files": [
-    "dist/**"
-  ],
+  "files": ["dist/**"],
   "exports": {
     ".": "./dist/*"
   },
   "scripts": {
     "build": "tsc --project tsconfig.json && chmod +x ./dist/index.js",
-    "dev": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./src/index.ts --config=\"./config.json\" --migrate-scss-variables",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./src/index.ts --config=\"./config.json\" --migrate-scss-variables --dry",
+    "run": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./src/index.ts",
+    "test": "vitest",
     "prepublish": "npm run build"
   },
   "bin": {
@@ -23,11 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/Artawower/css-toolchain.git"
   },
-  "keywords": [
-    "css",
-    "scss",
-    "toolchain"
-  ],
+  "keywords": ["css", "scss", "toolchain"],
   "author": "darkawower <artawower@protonmail.com> (https://du-blog.ru/)",
   "license": "MIT",
   "bugs": {
@@ -39,7 +34,8 @@
     "ts-node": "^10.9.1",
     "tslib": "2.6.2",
     "tsm": "2.3.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vitest": "2.0.5"
   },
   "dependencies": {
     "commander": "12.1.0",

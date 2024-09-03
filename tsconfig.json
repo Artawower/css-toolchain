@@ -15,7 +15,7 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "types": ["node"]
+    "types": ["node", "vitest/importMeta"]
   },
   "ts-node": {
     "transpileOnly": true,

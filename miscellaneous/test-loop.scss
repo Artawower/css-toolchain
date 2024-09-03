@@ -1,0 +1,9 @@
+@for $i from 1 through length($avatar-colors) {
+  $c: nth($avatar-colors, $i);
+
+  .organization:nth-child(#{$i}) {
+    .avatar {
+      background-color: $c;
+    }
+  }
+}

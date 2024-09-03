@@ -1,4 +1,4 @@
 {
-  "excludePatterns": ["node_modules/*"],
-  "projectPath": "/Users/darkawower/projects/ui"
+  "excludePatterns": ["node_modules", "node_modules/*"],
+  "projectPath": "/Users/darkawower/projects/pet/css-toolchain/miscellaneous/mixin.scss"
 }
