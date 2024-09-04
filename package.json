@@ -1,6 +1,6 @@
 {
   "name": "css-toolchain",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "CLI tool for manipulate with your css, migrate scss variables etc",
   "main": "dist/index.js",
   "type": "module",
@@ -15,9 +15,9 @@
     "build": "tsc --project tsconfig.json && chmod +x ./dist/index.js",
     "dev": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./src/index.ts --config=\"./config.json\" --migrate-scss-variables --dry",
     "run": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./src/index.ts",
-    "test": "vitest",
-    "prepublishOnly": "npm run build",
-    "prepublish": "npm run build"
+    "test": "vitest run",
+    "prepublishOnly": "npm run test && npm run build",
+    "prepublish": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",

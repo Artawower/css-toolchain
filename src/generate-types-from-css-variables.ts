@@ -11,5 +11,5 @@ export function generateTypesFromCssVariables(
   const [first, ...rest] = cssVars;
   const restTypes = rest.map((v) => `  | ${v}`).join('\n');
 
-  return `export type CssVariables = ${first}\n${restTypes};`;
+  return `export type CssVariables = ${first}\n${restTypes};\n`;
 }
