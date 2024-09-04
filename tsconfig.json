@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "es2021",
     "rootDir": "./src",
     "baseUrl": "./src",
-    "module": "ESNext",
+    "module": "es2022",
     "outDir": "dist",
     "removeComments": true,
     "declaration": true,
@@ -16,10 +16,6 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "types": ["node", "vitest/importMeta"]
-  },
-  "ts-node": {
-    "transpileOnly": true,
-    "esm": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]

@@ -7,6 +7,17 @@ import { CSS_ROOT_SELECTOR_NODES } from './constants.js';
 type ScssInfo = Omit<ScssFileInfo, 'file'>;
 
 const skipedTypes = ['for_statement'];
+const cssVariablesExtractRegexp = /^ *(--.*):/gm;
+
+export function extractCssVariablesDeclarations(cssContent: string): string[] {
+  return Array.from(
+    new Set(
+      Array.from(cssContent.matchAll(cssVariablesExtractRegexp)).map(
+        (m) => m[1]
+      )
+    )
+  );
+}
 
 export function extractScssVariables(
   filePath: string,

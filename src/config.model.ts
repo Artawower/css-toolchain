@@ -4,4 +4,6 @@ export interface Config {
   excludePatterns?: string[];
   ignoreScssVariables?: string[];
   dry?: boolean;
+  typePath?: string;
+  generateFlatTypes?: boolean;
 }

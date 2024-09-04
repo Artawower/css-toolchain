@@ -54,7 +54,7 @@ $main-color-7: #6487ad;
       --color-main-14: #ffffff; // white?
       --color-accent: #fab55b;
       --color-semantic-info: #3782f2;
-
+      
       --main-color-2: #e9f1fb;
       --main-color-3: #d0e4f8;
       --main-color-4: #cdddf0;
@@ -449,6 +449,7 @@ $popover-border-radius: 6px;
   expect(readFileSync(fileName, 'utf-8')).toMatchInlineSnapshot(`
     "@import 'variables';
 
+
     :host {
       // Triangle caret pointing to anchor element
 
@@ -642,7 +643,7 @@ test('Should replace scss calc option with css variables', async () => {
   });
 
   expect(readFileSync(fileName, 'utf-8')).toMatchInlineSnapshot(`
-    "
+    " 
     :root {
       --border-neutral: 1px solid #{var(--neutral-light)};
       --border-neutral-lightest: 1px solid var(--neutral-lightest);
